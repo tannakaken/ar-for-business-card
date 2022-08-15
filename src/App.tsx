@@ -5,6 +5,7 @@ import ARMarker from "./ar-marker";
 import { Stage } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import TextObject from "./text-object";
+import Model from "./Model";
 
 const ARMarkerModel = () => {
   const orbit = useRef<any>();
@@ -18,11 +19,32 @@ const ARMarkerModel = () => {
       }}
     >
       <Stage>
+        <Model
+          rotation={[Math.PI, Math.PI, Math.PI]}
+          scale={5}
+          asset="assets/CesiumMan.glb"
+        />
         <TextObject
-          text="Twitter"
+          text="e-mail"
+          y={8}
+          x={-7}
+          onClick={() => (window.location.href = "mailto:tannakaken@gmail.com")}
+          color={"orange"}
+        />
+        <TextObject
+          text="twitter"
+          y={8}
           onClick={() =>
             (window.location.href = "https://twitter.com/tannakaken")
           }
+          color={"royalblue"}
+        />
+        <TextObject
+          text="web site"
+          y={8}
+          x={7}
+          onClick={() => (window.location.href = "https://tannakaken.xyz")}
+          color={"green"}
         />
       </Stage>
     </ARMarker>
