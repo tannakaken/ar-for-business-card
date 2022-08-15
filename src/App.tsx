@@ -4,7 +4,7 @@ import ARCanvas from "./ar-canvas";
 import ARMarker from "./ar-marker";
 import { Stage } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
-import BoxButton from "./box-button";
+import TextObject from "./text-object";
 
 const ARMarkerModel = () => {
   const orbit = useRef<any>();
@@ -18,9 +18,11 @@ const ARMarkerModel = () => {
       }}
     >
       <Stage>
-        <BoxButton
-          position={[0, 0, 0]}
-          onClick={() => (window.location.href = "https://tannakaken.xyz")}
+        <TextObject
+          text="Twitter"
+          onClick={() =>
+            (window.location.href = "https://twitter.com/tannakaken")
+          }
         />
       </Stage>
     </ARMarker>
