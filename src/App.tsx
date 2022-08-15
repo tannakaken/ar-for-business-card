@@ -2,40 +2,28 @@ import React, { useRef } from "react";
 import "./App.css";
 import ARCanvas from "./ar-canvas";
 import ARMarker from "./ar-marker";
-import { OrbitControls, Stage } from "@react-three/drei";
-import Model from "./Model";
-import { useFrame, useThree } from "@react-three/fiber";
+import { Stage } from "@react-three/drei";
+import { useFrame } from "@react-three/fiber";
+import BoxButton from "./box-button";
 
 const ARMarkerModel = () => {
-  const { camera, gl } = useThree();
   const orbit = useRef<any>();
   useFrame(() => orbit.current && orbit.current.update());
   return (
-    <>
-      <OrbitControls
-        ref={orbit}
-        enableZoom={false}
-        enablePan={false}
-        args={[camera, gl.domElement]}
-        enableDamping={true}
-        dampingFactor={0.1}
-        rotateSpeed={0.5}
-      />
-      <ARMarker
-        type={"pattern"}
-        patternUrl={"data/pattern-qrcode.patt"}
-        onMarkerFound={() => {
-          console.log("Marker Found");
-        }}
-      >
-        <Stage>
-          <Model
-            rotation={[Math.PI / 2, Math.PI, Math.PI]}
-            asset="assets/CesiumMan.glb"
-          />
-        </Stage>
-      </ARMarker>
-    </>
+    <ARMarker
+      type={"pattern"}
+      patternUrl={"data/pattern.patt"}
+      onMarkerFound={() => {
+        console.log("Marker Found");
+      }}
+    >
+      <Stage>
+        <BoxButton
+          position={[0, 0, 0]}
+          onClick={() => (window.location.href = "https://tannakaken.xyz")}
+        />
+      </Stage>
+    </ARMarker>
   );
 };
 
@@ -53,8 +41,8 @@ const App = () => {
           console.log("onCreated ARCanvas");
           gl.setSize(window.innerWidth, window.innerHeight);
         }}
+        patternRatio={0.9}
       >
-        <OrbitControls makeDefault />
         <ambientLight />
         <pointLight position={[10, 10, 0]} intensity={10.0} />
         <ARMarkerModel />
