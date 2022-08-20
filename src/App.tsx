@@ -21,8 +21,8 @@ const ARMarkerModel = () => {
       <Stage>
         <Model
           rotation={[Math.PI, Math.PI, Math.PI]}
-          scale={5}
-          asset="assets/CesiumMan.glb"
+          scale={1}
+          asset="assets/tannakaken.glb"
         />
         <TextObject
           text="e-mail"
