@@ -6,6 +6,7 @@ import { Stage } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import TextObject from "./text-object";
 import Model from "./Model";
+import { chooseBegin } from "./begins";
 
 const ARMarkerModel = () => {
   const orbit = useRef<any>();
@@ -56,7 +57,7 @@ const ARMarkerModel = () => {
  */
 const App = () => {
   return (
-    <React.Suspense fallback={<span>loading...</span>}>
+    <React.Suspense fallback={<span>{chooseBegin()}</span>}>
       <ARCanvas
         dpr={window.devicePixelRatio}
         onCameraStreamReady={() => console.log("Camera stream ready")}
