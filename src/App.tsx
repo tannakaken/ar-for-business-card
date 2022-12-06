@@ -118,6 +118,7 @@ const App = () => {
         onClick={() => {
           if (modalRef.current) {
             modalRef.current.style.display = "block";
+            modalRef.current.className = "fadein-animation";
           }
         }}
       >
@@ -134,13 +135,24 @@ const App = () => {
           margin: "auto",
           width: "80vw",
           height: "80vh",
-          display: "none",
           backgroundColor: "white",
           borderRadius: "20px",
           padding: "20px",
+          willChange: "opacity",
+          opacity: 0,
+          display: "none",
         }}
       >
         <h2>淡中圏</h2>
+        <div style={{ textAlign: "center" }}>
+          <img
+            src="category.png"
+            width="250px"
+            height="250px"
+            style={{ objectFit: "cover" }}
+            alt="圏"
+          />
+        </div>
         <div>
           <ul>
             <li>小説家</li>
@@ -170,7 +182,12 @@ const App = () => {
           }}
           onClick={() => {
             if (modalRef.current) {
-              modalRef.current.style.display = "none";
+              modalRef.current.className = "fadeout-animation";
+              setTimeout(() => {
+                if (modalRef.current) {
+                  modalRef.current.style.display = "none";
+                }
+              }, 1000);
             }
           }}
         >
