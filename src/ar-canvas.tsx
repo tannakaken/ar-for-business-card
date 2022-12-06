@@ -1,17 +1,17 @@
-import React from "react"
-import { RootState, Canvas } from "@react-three/fiber"
+import React from "react";
+import { RootState, Canvas } from "@react-three/fiber";
 
-import { AR, ArProps } from "./ar"
+import { AR, ArProps } from "./ar";
 
 type ArCanvasProps = ArProps & {
-    arEnabled?: boolean;
-    camera?: {
-      position: [number, number, number];
-      far?: number;
-    };
-    gl?: any;
-    onCreated: (obj: RootState) => void;
-    dpr?: number;
+  arEnabled?: boolean;
+  camera?: {
+    position: [number, number, number];
+    far?: number;
+  };
+  gl?: any;
+  onCreated: (obj: RootState) => void;
+  dpr?: number;
 };
 
 const ARCanvas = ({
@@ -38,13 +38,14 @@ const ARCanvas = ({
         sourceType={sourceType}
         cameraParametersUrl={cameraParametersUrl}
         onCameraStreamReady={onCameraStreamReady}
-        onCameraStreamError={onCameraStreamError}>
+        onCameraStreamError={onCameraStreamError}
+      >
         {children}
       </AR>
     ) : (
       children
     )}
   </Canvas>
-)
+);
 
-export default ARCanvas
+export default ARCanvas;

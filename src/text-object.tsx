@@ -40,10 +40,11 @@ const TextObject = ({
         castShadow
         receiveShadow
         onClick={onClick}
+        scale={1.5}
       >
         <meshPhongMaterial color={color} />
       </mesh>
-      <Sphere position={[x, y + 1, z]} scale={2} onClick={onClick}>
+      <Sphere position={[x, y + 1, z]} scale={4} onClick={onClick}>
         <meshStandardMaterial transparent opacity={0} />
       </Sphere>
     </group>
