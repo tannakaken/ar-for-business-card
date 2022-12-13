@@ -147,18 +147,78 @@ const App = () => {
         <div style={{ textAlign: "center" }}>
           <img
             src="category.png"
-            width="250px"
-            height="250px"
+            width="200px"
+            height="200px"
             style={{ objectFit: "cover" }}
             alt="圏"
           />
         </div>
         <div>
           <ul>
-            <li>小説家</li>
-            <li>プログラマー</li>
-            <li>データサイエンティスト</li>
-            <li>数学者</li>
+            <li>
+              小説家
+              <ul>
+                <li>SF</li>
+                <li>実験小説</li>
+              </ul>
+            </li>
+            <li>
+              プログラマー
+              <ul>
+                <li>
+                  バックエンド
+                  <ul>
+                    <li>FastAPI/Python</li>
+                    <li>Laravel/PHP</li>
+                  </ul>
+                </li>
+                <li>
+                  フロントエンド
+                  <ul>
+                    <li>React/TypeScript</li>
+                    <li>React Native/TypeScript&Swift&Kotlin</li>
+                  </ul>
+                </li>
+                <li>
+                  3D
+                  <ul>
+                    <li>Three.js&WebGL/TypeScript</li>
+                    <li>Unity/C#</li>
+                  </ul>
+                </li>
+                <li>
+                  その他システム
+                  <ul>
+                    <li>C&C++&Rust&Lisp&Ocaml&Erlang</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              データサイエンティスト
+              <ul>
+                <li>AI開発/Python</li>
+                <li>データ解析/R</li>
+                <li>数値シミュレーション/Julia</li>
+              </ul>
+            </li>
+            <li>
+              ITコンサルタント
+              <ul>
+                <li>システム化支援</li>
+                <li>IT講習</li>
+                <li>プログラミング講習</li>
+                <li>データサイエンス講習</li>
+                <li>SFプロトタイピング</li>
+              </ul>
+            </li>
+            <li>
+              数学者
+              <ul>
+                <li>アルゴリズム開発</li>
+                <li>Coq&Alloyによるモデル検証</li>
+              </ul>
+            </li>
           </ul>
         </div>
         <dl>
