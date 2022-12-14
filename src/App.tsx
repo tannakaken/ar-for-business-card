@@ -192,7 +192,7 @@ const App = () => {
                   </li>
                   <li>
                     <details>
-                      <summary>3D</summary>
+                      <summary>3D&WebXR</summary>
                       <ul>
                         <li>Three.js&WebGL/TypeScript</li>
                         <li>Unity/C#</li>
