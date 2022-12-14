@@ -133,91 +133,138 @@ const App = () => {
           right: 0,
           bottom: 0,
           margin: "auto",
-          width: "80vw",
-          height: "80vh",
+          width: "90vw",
+          height: "90vh",
           backgroundColor: "white",
           borderRadius: "20px",
-          padding: "20px",
+          paddingTop: 0,
+          paddingLeft: "10px",
+          paddingRight: "10px",
           willChange: "opacity",
           opacity: 0,
           display: "none",
         }}
       >
-        <h2>淡中圏</h2>
+        <h2 style={{ marginBottom: 0 }}>淡中圏</h2>
         <div style={{ textAlign: "center" }}>
           <img
             src="category.png"
-            width="200px"
-            height="200px"
+            width="50%"
+            height="50%"
             style={{ objectFit: "cover" }}
             alt="圏"
           />
         </div>
-        <div>
-          <ul>
+        <div style={{ overflow: "scroll", height: "25vh" }}>
+          <ul style={{ listStyle: "none" }}>
             <li>
-              小説家
-              <ul>
-                <li>SF</li>
-                <li>実験小説</li>
-              </ul>
+              <details>
+                <summary>小説家</summary>
+                <ul>
+                  <li>SF</li>
+                  <li>実験小説</li>
+                </ul>
+              </details>
             </li>
             <li>
-              プログラマー
-              <ul>
-                <li>
-                  バックエンド
-                  <ul>
-                    <li>FastAPI/Python</li>
-                    <li>Laravel/PHP</li>
-                  </ul>
-                </li>
-                <li>
-                  フロントエンド
-                  <ul>
-                    <li>React/TypeScript</li>
-                    <li>React Native/TypeScript&Swift&Kotlin</li>
-                  </ul>
-                </li>
-                <li>
-                  3D
-                  <ul>
-                    <li>Three.js&WebGL/TypeScript</li>
-                    <li>Unity/C#</li>
-                  </ul>
-                </li>
-                <li>
-                  その他システム
-                  <ul>
-                    <li>C&C++&Rust&Lisp&Ocaml&Erlang</li>
-                  </ul>
-                </li>
-              </ul>
+              <details>
+                <summary>プログラマー</summary>
+                <ul style={{ listStyle: "none" }}>
+                  <li>
+                    <details>
+                      <summary>バックエンド</summary>
+                      <ul>
+                        <li>FastAPI/Python</li>
+                        <li>Laravel/PHP</li>
+                      </ul>
+                    </details>
+                  </li>
+                  <li>
+                    <details>
+                      <summary>フロントエンド</summary>
+                      <ul>
+                        <li>React/TypeScript</li>
+                        <li>React Native/TypeScript</li>
+                        <li>Android/Java&Kotlin</li>
+                        <li>iOS/Objective-C&Swift</li>
+                      </ul>
+                    </details>
+                  </li>
+                  <li>
+                    <details>
+                      <summary>3D</summary>
+                      <ul>
+                        <li>Three.js&WebGL/TypeScript</li>
+                        <li>Unity/C#</li>
+                      </ul>
+                    </details>
+                  </li>
+                  <li>
+                    <details>
+                      <summary>データベース</summary>
+                      <ul>
+                        <li>MySQL</li>
+                        <li>PostgreSQL</li>
+                        <li>Redis</li>
+                      </ul>
+                    </details>
+                  </li>
+                  <li>
+                    <details>
+                      <summary>クラウド</summary>
+                      <ul>
+                        <li>AWS</li>
+                        <li>GCP</li>
+                        <li>Firebase</li>
+                      </ul>
+                    </details>
+                  </li>
+                  <li>
+                    <details>
+                      <summary>その他システム</summary>
+                      <ul>
+                        <li>C/C++</li>
+                        <li>Rust</li>
+                        <li>Ocaml</li>
+                        <li>Erlang</li>
+                        <li>Lisp</li>
+                        <li>Prolog</li>
+                      </ul>
+                    </details>
+                  </li>
+                </ul>
+              </details>
             </li>
             <li>
-              データサイエンティスト
-              <ul>
-                <li>AI開発/Python</li>
-                <li>データ解析/R</li>
-                <li>数値シミュレーション/Julia</li>
-              </ul>
+              <details>
+                <summary>データサイエンティスト</summary>
+                <ul>
+                  <li>AI開発/Python</li>
+                  <li>データ解析/R</li>
+                  <li>数値シミュレーション/Julia</li>
+                </ul>
+              </details>
             </li>
             <li>
-              ITコンサルタント
-              <ul>
-                <li>システム化支援</li>
-                <li>IT講習</li>
-                <li>プログラミング講習</li>
-                <li>データサイエンス講習</li>
-                <li>SFプロトタイピング</li>
-              </ul>
+              <details>
+                <summary>ITコンサルタント</summary>
+                <ul>
+                  <li>システム化支援</li>
+                  <li>IT講習</li>
+                  <li>プログラミング講習</li>
+                  <li>データサイエンス講習</li>
+                  <li>SFプロトタイピング</li>
+                </ul>
+              </details>
             </li>
             <li>
-              数学者
-              <ul>
-                <li>アルゴリズム開発</li>
-                <li>Coq&Alloyによるモデル検証</li>
-              </ul>
+              <details>
+                <summary>数学者</summary>
+                <ul>
+                  <li>アルゴリズム開発</li>
+                  <li>Coq&Alloyによるモデル検証</li>
+                </ul>
+              </details>
             </li>
           </ul>
         </div>
