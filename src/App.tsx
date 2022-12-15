@@ -176,6 +176,7 @@ const App = () => {
                       <ul>
                         <li>FastAPI/Python</li>
                         <li>Laravel/PHP</li>
+                        <li>Ruby on Rails/Ruby</li>
                       </ul>
                     </details>
                   </li>
