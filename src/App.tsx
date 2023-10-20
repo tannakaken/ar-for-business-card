@@ -26,7 +26,7 @@ const ARMarkerModel = () => {
           }
         }}
       >
-        <Stage>
+        <Stage environment={null}>
           <Model
             rotation={[(Math.PI * 3) / 4, Math.PI, Math.PI]}
             scale={2}

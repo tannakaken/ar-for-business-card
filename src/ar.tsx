@@ -107,12 +107,12 @@ const AR = React.memo(
             arContext.arToolkitContext.arController.orientation = "landscape";
             arContext.arToolkitContext.arController.options.orientation =
               "landscape";
-            console.warn("landscape");
+            console.log("landscape");
           } else {
             arContext.arToolkitContext.arController.orientation = "portrait";
             arContext.arToolkitContext.arController.options.orientation =
               "portrait";
-            console.warn("portrait");
+            console.log("portrait");
           }
 
           if (onCameraStreamReady) {
